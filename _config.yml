@@ -1,0 +1,10 @@
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
+
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+baseurl: ""
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
