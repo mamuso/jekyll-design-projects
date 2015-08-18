@@ -1,0 +1,29 @@
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     32px;
+
+
+// Yeah, I know... naming colors is hard
+$white: #FFFFFF;
+
+$grey-lightest: #F7F8FB;
+$grey-lighter: #ECEDF0;
+$grey: #C8D3DB;
+$grey-darker: #B6C6D1;
+$grey-darkest: #A4B9C7;
+
+$hero: #67B0E2;
+
+$dark-lighter: #2E3F59;
+$dark: #27374F;
+$dark-darker: #212326;
+
+
+
+$on-palm:          600px;
+$on-laptop:        800px;

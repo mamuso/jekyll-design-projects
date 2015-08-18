@@ -18,11 +18,10 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    color: $dark-darker;
+    background-color: $white;
     -webkit-text-size-adjust: 100%;
 }
-
 
 
 /**
@@ -34,17 +33,6 @@ ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
-
-
-
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
 
 
 /**
@@ -89,15 +77,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $hero;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($hero, 15%);
     }
 
     &:hover {
-        color: $text-color;
+        color: darken($hero, 15%);
         text-decoration: underline;
     }
 }
@@ -108,8 +96,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $grey;
+    border-left: 4px solid $grey-lighter;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -121,16 +109,14 @@ blockquote {
 }
 
 
-
 /**
  * Code formatting
  */
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $grey-lighter;
     border-radius: 3px;
-    background-color: #eef;
 }
 
 code {
@@ -148,57 +134,21 @@ pre {
     }
 }
 
-
-
 /**
- * Wrapper
+ * PROJECT HEADER
  */
-.wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
+header.site-header {
+    background: $dark;
+    padding: $spacing-unit/4;
+    img { 
         display: inline-block;
-        width: 16px;
-        height: 16px;
         vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
     }
+    a { color: $grey-darkest; }
+    a:hover{ text-decoration: none; }
+    a::after {
+        content: " › ";
+    }
+    a:last-child { color: $white; }
+    a:first-child::after, a:last-child::after { content: ""; }
 }

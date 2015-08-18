@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+
 {% if page.redlines.base %}
   <div class="base">
     {% for base in page.redlines.base %}
@@ -6,14 +16,15 @@
     </div>
 {% endif %}
 
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+    {% include footer.html %}
 
-</div>
+  </body>
+
+</html>

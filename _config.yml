@@ -2,9 +2,11 @@ exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
 
 # Site settings
 title: An Awesome Design Project
-logourl: "" # Customize the top logo
+logourl: "/img/project-logo.svg" # Customize the top logo
 baseurl: ""
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+gems:
+- jemoji
