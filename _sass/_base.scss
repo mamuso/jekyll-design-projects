@@ -141,11 +141,16 @@ pre {
     max-width: 1280px;
 }
 
+.hide { display: none; }
+
 /**
  * PROJECT HEADER
  */
 header.site-header {
     background: $dark;
+    position: relative;
+    z-index: 10001;
+    .wrapper { height: 50px; }
     img { 
         display: inline-block;
         vertical-align: middle;

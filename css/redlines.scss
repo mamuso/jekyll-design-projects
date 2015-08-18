@@ -8,3 +8,30 @@
         "variables",
         "base"
 ;
+
+
+.vgrid {
+  position: absolute;
+  z-index: 1000;
+  top: 66px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-position: left top;
+  &.vgrid-4 {
+    background-size: 1px 8px;
+    background-image: url(../img/grid/vgrid-4.png);
+  }
+  &.vgrid-5 {
+    background-size: 1px 10px;
+    background-image: url(../img/grid/vgrid-5.png);
+  }
+  &.vgrid-8 {
+    background-size: 1px 16px;
+    background-image: url(../img/grid/vgrid-8.png);
+  }
+  &.vgrid-10 {
+    background-size: 1px 20px;
+    background-image: url(../img/grid/vgrid-10.png);
+  }
+}
