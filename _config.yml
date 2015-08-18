@@ -1,7 +1,7 @@
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
 
-# Site settings
-title: An Awesome Design Project
+# Site secttings
+title: A Cool Design Project 
 logourl: "/img/project-logo.svg" # Customize the top logo
 baseurl: "/jekyll-design-projects"
 
