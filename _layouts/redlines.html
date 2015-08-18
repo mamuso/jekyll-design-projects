@@ -1,3 +1,11 @@
+{% if page.redlines.base %}
+  <div class="base">
+    {% for base in page.redlines.base %}
+      <img src="{{ base }}"/>
+    {% endfor %}
+    </div>
+{% endif %}
+
 <div class="post">
 
   <header class="post-header">
