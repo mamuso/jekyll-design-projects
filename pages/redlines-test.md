@@ -10,6 +10,9 @@ redlines:
   base:
     - "img/redlines-test/base-00.png"
     - "img/redlines-test/base-01.png"
+    - "img/redlines-test/base-01.png"
+    - "img/redlines-test/base-01.png"
+    - "img/redlines-test/base-01.png"
   layers:
     - name: ""
 ---
