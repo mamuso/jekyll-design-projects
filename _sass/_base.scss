@@ -134,12 +134,18 @@ pre {
     }
 }
 
+.wrapper {
+    margin: 0 auto;
+    padding: $spacing-unit/4;
+    width: 98%;
+    max-width: 1280px;
+}
+
 /**
  * PROJECT HEADER
  */
 header.site-header {
     background: $dark;
-    padding: $spacing-unit/4;
     img { 
         display: inline-block;
         vertical-align: middle;
