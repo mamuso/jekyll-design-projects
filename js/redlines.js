@@ -1,13 +1,18 @@
-var confs = [];
+var confs = [],
+  notes = [];
 
 checkConf = function() {
-
   a = document.getElementById(this.id+"-elem");
   if (this.checked) {
     a.classList.remove('hide');
   } else {
     a.classList.add('hide');
   }
+}
+
+toggleNote = function() {
+  a = document.getElementById(this.id+"-text");
+  a.classList.toggle('hide');
 }
 
 window.onload = function() {
@@ -22,6 +27,12 @@ window.onload = function() {
 
   for(i=0; i<confs.length; i++) {
     confs[i].onchange =  checkConf
+  }
+
+  notes = document.getElementsByClassName("note-dot");
+
+  for(i=0; i<notes.length; i++) {
+    notes[i].onclick =  toggleNote
   }
 
 }

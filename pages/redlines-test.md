@@ -13,18 +13,25 @@ redlines:
       - "/img/redlines-test/base-01.png"
       - "/img/redlines-test/base-02.png"
   layers:
-    - name: "Show Spacing"
+    - name: "Spacing"
       retina: true
       open: false
       images: 
         - "/img/redlines-test/spacing-01.png"
         - "/img/redlines-test/spacing-02.png"
-    - name: "Show Color & Typography"
+    - name: "Color & Typography"
       retina: true
       open: false
       images: 
         - "/img/redlines-test/color-01.png"
         - "/img/redlines-test/color-02.png"
+  notes:
+    - x: 380
+      y: 250
+      text: "We don't have a version without image. Isn't that **bold**?"
+    - x: 906
+      y: 187
+      text: "The text can grow, but we recommend you to use only 2 line headlines"
 ---
 
 :metal::metal::metal: and so on :metal::metal::metal:

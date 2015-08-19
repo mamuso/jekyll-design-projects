@@ -11,12 +11,15 @@
     <a href="#" id="redlines-toolbar-action">X</a>
     <ul>
       {% if page.redlines.verticalgrid %}
-        <li><input name="conf" type="checkbox" id="vgrid"> <label for="vgrid">Show Grid</label></li>
+        <li><input name="conf" type="checkbox" id="vgrid"> <label for="vgrid">Grid</label></li>
       {% endif %}
       {% if page.redlines.layers %}
         {% for layer in page.redlines.layers %}
           <li><input name="conf" type="checkbox" id="layer-{{ layer.name | slugify }}"> <label for="layer-{{ layer.name | slugify }}">{{ layer.name }}</label></li>
         {% endfor %}
+      {% endif %}
+      {% if page.redlines.notes %}
+        <li><input name="conf" type="checkbox" id="notes" checked="checked"> <label for="notes">Notes</label></li>
       {% endif %}
     </ul>
   </div>
@@ -43,6 +46,18 @@
       {% endfor %}
     {% endif %}
 
+    {% if page.redlines.notes %}
+      <div class="overlayer redlines-layer" id="notes-elem">
+        {% for note in page.redlines.notes %}
+          <div class="note" style="left: {{note.x}}px; top: {{note.y}}px;">
+            <div class="note-dot" id="note-{{ forloop.index }}"></div>
+            <div class="note-text overlayer hide" id="note-{{ forloop.index }}-text">
+              {{ note.text | markdownify }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
   {% endif %}
 
