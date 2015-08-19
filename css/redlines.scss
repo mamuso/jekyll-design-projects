@@ -43,8 +43,8 @@
 }
 
 .overlayer {
-    transition: all .25s ease; 
-  -webkit-transition: all .25s ease;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease; 
 }
 
 .redlines {
@@ -64,7 +64,10 @@
   }
 }
 
-.redlines-content { text-align: center; }
+.redlines-content { 
+  text-align: center; 
+  font-size: $small-font-size;
+}
 
 .redlines-toolbar {
   position: absolute;

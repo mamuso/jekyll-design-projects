@@ -1,4 +1,4 @@
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
+exclude: ['LICENSE', 'README.md', 'Gemfile.lock', 'Gemfile']
 
 # Site secttings
 title: A Cool Design Project 

@@ -6,7 +6,7 @@ permalink: /redlines-test/
 # Redlines YAML structure
 redlines:
   verticalgrid: 8 # Options are 4/8/5/10/false
-  offset: 40 # To adjust your design with the grid
+  offset: 37 # To adjust your design with the grid
   base:
     retina: true
     images: 
@@ -27,4 +27,4 @@ redlines:
         - "/img/redlines-test/color-02.png"
 ---
 
-:+1: and so on
+:metal::metal::metal: and so on :metal::metal::metal:
