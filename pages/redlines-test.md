@@ -32,6 +32,9 @@ redlines:
     - x: 906
       y: 187
       text: "The text can grow, but we recommend you to use only 2 line headlines"
+    - x: 646
+      y: 269
+      text: "Another note, because, why not? Also, let's add [a link](https://www.etsy.com/)"
 ---
 
 :metal::metal::metal: and so on :metal::metal::metal:
