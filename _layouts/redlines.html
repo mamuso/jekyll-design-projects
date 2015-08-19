@@ -7,24 +7,25 @@
 
   {% include header.html %}
 
-  <div class="toolbar">
+  <div class="redlines-toolbar" id="redlines-toolbar">
+    <a href="#" id="redlines-toolbar-action">X</a>
     <ul>
       {% if page.redlines.verticalgrid %}
-        <li><input type="checkbox" id="vgrid"> <label for="vgrid">Show Grid</label></li>
+        <li><input name="conf" type="checkbox" id="vgrid"> <label for="vgrid">Show Grid</label></li>
       {% endif %}
       {% if page.redlines.layers %}
         {% for layer in page.redlines.layers %}
-          <li><input type="checkbox" id="layer-{{ layer.name | slugify }}"> <label for="layer-{{ layer.name | slugify }}">{{ layer.name }}</label></li>
+          <li><input name="conf" type="checkbox" id="layer-{{ layer.name | slugify }}"> <label for="layer-{{ layer.name | slugify }}">{{ layer.name }}</label></li>
         {% endfor %}
       {% endif %}
     </ul>
   </div>
 
   {% if page.redlines.verticalgrid %}
-  <div class="vgrid vgrid-{{ page.redlines.verticalgrid }} hide" id="vgrid"></div>
+  <div class="overlayer vgrid vgrid-{{ page.redlines.verticalgrid }} hide" id="vgrid-elem"></div>
   {% endif %}
 
-  <div class="redlines" style="margin-top: {{ page.redlines.offset }}px">
+  <div class="redlines" id="redlines" style="margin-top: {{ page.redlines.offset }}px">
     
   {% if page.redlines.base %}
   <div class="redlines-base">
@@ -34,7 +35,7 @@
 
     {% if page.redlines.layers %}
       {% for layer in page.redlines.layers %}
-      <div class="redlines-layer {% if layer.open == false %}hide{% endif %}" id="layer-{{ layer.name | slugify }}">
+      <div class="overlayer redlines-layer {% if layer.open == false %}hide{% endif %}" id="layer-{{ layer.name | slugify }}-elem">
         {% for image in layer.images %}
           <img src="{{ image | prepend: site.baseurl }}" class="{% if layer.retina %}retina-img{% endif %}" />
         {% endfor %}
