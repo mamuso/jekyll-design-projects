@@ -35,4 +35,12 @@ window.onload = function() {
     notes[i].onclick =  toggleNote
   }
 
+  action = document.getElementById('redlines-toolbar-action')
+  action.onclick = function (e) {
+    document.getElementById('redlines-toolbar-action-close').classList.toggle('hide');
+    document.getElementById('redlines-toolbar-action-gear').classList.toggle('hide');
+    document.getElementById('redlines-toolbar').classList.toggle('closed');
+    return false;
+  }
+
 }

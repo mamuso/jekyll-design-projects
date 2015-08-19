@@ -8,7 +8,7 @@
   {% include header.html %}
 
   <div class="redlines-toolbar" id="redlines-toolbar">
-    <a href="#" id="redlines-toolbar-action">X</a>
+    <a href="#" id="redlines-toolbar-action"><img src="{{ "/img/icon-close.svg" | prepend: site.baseurl }}" width="20" id="redlines-toolbar-action-close"><img src="{{ "/img/icon-gear.svg" | prepend: site.baseurl }}" width="20" id="redlines-toolbar-action-gear" class="hide"></a>
     <ul>
       {% if page.redlines.verticalgrid %}
         <li><input name="conf" type="checkbox" id="vgrid"> <label for="vgrid">Grid</label></li>

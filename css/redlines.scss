@@ -114,11 +114,19 @@
   font-size: $small-font-size;
   padding: $spacing-unit/1.8;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid $grey-lighter; 
+  border: 1px solid $grey-lighter;
+  &.closed {
+    background-color: $grey-lighter;
+    ul { display: none; }
+  }
   #redlines-toolbar-action {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 9px;
+    top: 9px;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
   }
   ul {
     list-style: none;
