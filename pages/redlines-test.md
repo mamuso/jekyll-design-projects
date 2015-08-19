@@ -1,20 +1,30 @@
 ---
 layout: redlines
-title: Post Structure
+title: Post Redlines
 permalink: /redlines-test/
 
 # Redlines YAML structure
 redlines:
   verticalgrid: 8 # Options are 4/8/5/10/false
-  offset: 20 # To adjust your design with the grid
+  offset: 40 # To adjust your design with the grid
   base:
-    - "img/redlines-test/base-00.png"
-    - "img/redlines-test/base-01.png"
-    - "img/redlines-test/base-01.png"
-    - "img/redlines-test/base-01.png"
-    - "img/redlines-test/base-01.png"
+    retina: true
+    images: 
+      - "/img/redlines-test/base-01.png"
+      - "/img/redlines-test/base-02.png"
   layers:
-    - name: ""
+    - name: "Show Spacing"
+      retina: true
+      open: false
+      images: 
+        - "/img/redlines-test/spacing-01.png"
+        - "/img/redlines-test/spacing-02.png"
+    - name: "Show Color & Typography"
+      retina: true
+      open: false
+      images: 
+        - "/img/redlines-test/color-01.png"
+        - "/img/redlines-test/color-02.png"
 ---
 
 :+1: and so on

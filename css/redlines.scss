@@ -35,3 +35,28 @@
     background-image: url(../img/grid/vgrid-10.png);
   }
 }
+
+.retina-img {
+  display: block;
+  zoom: 50%;
+}
+
+.redlines {
+  position: relative;
+  text-align: center;
+  .redlines-base {
+    position: relative;
+    display: inline-block;
+  }
+  .redlines-layer {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.redlines-content { text-align: center; }
+
+.toolbar {
+  position: absolute;
+  z-index: 100002;
+}

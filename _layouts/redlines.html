@@ -7,21 +7,47 @@
 
   {% include header.html %}
 
+  <div class="toolbar">
+    <ul>
+      {% if page.redlines.verticalgrid %}
+        <li><input type="checkbox" id="vgrid"> <label for="vgrid">Show Grid</label></li>
+      {% endif %}
+      {% if page.redlines.layers %}
+        {% for layer in page.redlines.layers %}
+          <li><input type="checkbox" id="layer-{{ layer.name | slugify }}"> <label for="layer-{{ layer.name | slugify }}">{{ layer.name }}</label></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+
   {% if page.redlines.verticalgrid %}
-  <div class="vgrid vgrid-{{ page.redlines.verticalgrid }} hide"></div>
+  <div class="vgrid vgrid-{{ page.redlines.verticalgrid }} hide" id="vgrid"></div>
   {% endif %}
 
-
+  <div class="redlines" style="margin-top: {{ page.redlines.offset }}px">
+    
   {% if page.redlines.base %}
-  <div class="base">
-    {% for base in page.redlines.base %}
-    <img src="{{ base }}"/>
+  <div class="redlines-base">
+    {% for base in page.redlines.base.images %}
+    <img src="{{ base | prepend: site.baseurl }}" class="{% if page.redlines.base.retina %}retina-img{% endif %}" />
     {% endfor %}
+
+    {% if page.redlines.layers %}
+      {% for layer in page.redlines.layers %}
+      <div class="redlines-layer {% if layer.open == false %}hide{% endif %}" id="layer-{{ layer.name | slugify }}">
+        {% for image in layer.images %}
+          <img src="{{ image | prepend: site.baseurl }}" class="{% if layer.retina %}retina-img{% endif %}" />
+        {% endfor %}
+      </div>
+      {% endfor %}
+    {% endif %}
+
   </div>
   {% endif %}
 
+  </div>
 
-  <div class="page-content">
+  <div class="redlines-content">
     <div class="wrapper">
       {{ content }}
     </div>
