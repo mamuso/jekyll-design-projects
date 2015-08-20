@@ -15,7 +15,7 @@
       {% endif %}
       {% if page.redlines.layers %}
         {% for layer in page.redlines.layers %}
-          <li><input name="conf" type="checkbox" id="layer-{{ layer.name | slugify }}"> <label for="layer-{{ layer.name | slugify }}">{{ layer.name }}</label></li>
+          <li><input name="conf" type="checkbox" id="layer-{{ layer.name | slugify }}" {% if layer.open %}checked="checked"{% endif %}> <label for="layer-{{ layer.name | slugify }}">{{ layer.name }}</label></li>
         {% endfor %}
       {% endif %}
       {% if page.redlines.notes %}
@@ -52,6 +52,11 @@
           <div class="note" style="left: {{note.x}}px; top: {{note.y}}px;">
             <div class="note-dot" id="note-{{ forloop.index }}"></div>
             <div class="note-text overlayer hide" id="note-{{ forloop.index }}-text">
+              {% if note.author %}
+                <span class="note-avatar">
+                  <img src="https://twitter.com/{{ note.author }}/profile_image?size=original">
+                </span>
+              {% endif %}
               {{ note.text | markdownify }}
             </div>
           </div>
