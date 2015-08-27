@@ -4,12 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
-    {% if page.layout == "default" %}
-      <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
-    {% endif %}
     {% if page.layout == "redlines" %}
       <link rel="stylesheet" href="{{ "/css/redlines.css" | prepend: site.baseurl }}">
       <script type="text/javascript" src="{{ "/js/redlines.js" | prepend: site.baseurl }}"></script>
+    {% else %}
+      <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
     {% endif %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
