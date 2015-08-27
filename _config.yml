@@ -9,3 +9,11 @@ baseurl: "/jekyll-design-projects"
 markdown: kramdown
 gems:
 - jemoji
+
+collections:
+  INIT-test-project:
+    output: true
+    permalink: /:collection/:path/
+  INIT-test-project-2:
+    output: true
+    permalink: /:collection/:path/
