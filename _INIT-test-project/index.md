@@ -1,5 +1,5 @@
 ---
-layout: index-collection
+layout: collection
 title: index
 noindex: true
 ---
